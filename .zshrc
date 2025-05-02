@@ -1,47 +1,26 @@
+# Source Powerlevel10k instant prompt
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-export LC_ALL=en_US.UTF-8
-export EDITOR=nvim
+[[ -f ~/.zsh/aliases/tmux.zsh ]] && source ~/.zsh/aliases/tmux.zsh
 
-export PATH="$PATH:/home/evan/.cargo/bin"
+# Source all configuration files
+for file in ~/.zsh/env/*.zsh; do
+  [[ -r "$file" ]] && source "$file"
+done
 
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
-}
+for file in ~/.zsh/plugins/*.zsh; do
+  [[ -r "$file" ]] && source "$file"
+done
 
-setopt PROMPT_SUBST
+for file in ~/.zsh/functions/*.zsh; do
+  [[ -r "$file" ]] && source "$file"
+done
 
-PS1='%F{magenta}%/%F{white}$(parse_git_branch)
-%F{green}% 󰄾 %F{white}'
+for file in ~/.zsh/aliases/*.zsh; do
+  [[ -r "$file" ]] && source "$file"
+done
 
-alias g="lazygit"
-
-alias ls="lsd"
-alias la="lsd -a"
-alias lt="ls --tree"
-
-alias feh="feh --bg-fill"
-
-# theme() {
-#    wal --theme $1
-#    wal_update.sh
-# }
-
-alias theme='function() { wal --theme "$1"; wal_update.sh; }'
-
-generate() {
-   wal -i $1
-   wal_update.sh
-}
-
-alias generate='function() { wal -i "$1"; wal_update.sh; }'
-
-alias ..="cd .."
-
-alias .nv="cd ~/.config/nvim/"
-
-alias nv="nvim"
-alias vi="vim"
-alias lf='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
-alias http="ngrok http"
-
-alias icat="kitty +kitten icat"
+# Source Powerlevel10k configuration
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -1,0 +1,1 @@
+alias scan='context scan'

@@ -1,9 +1,0 @@
-configuration {
-  /* font: "Iosevka Comfy Wide Motion 9.3"; */
-  font: "Jetbrains Mono Semibold 8.2";
-  /* font: "Cartograph CF 8.2"; */
-  drun-display-format: "{icon} {name}";
-  show-icons: true;
-}
-
-@theme "theme"

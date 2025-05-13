@@ -1,26 +1,32 @@
-# Source Powerlevel10k instant prompt
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+export ZSH="$HOME/.oh-my-zsh"
 
-[[ -f ~/.zsh/aliases/tmux.zsh ]] && source ~/.zsh/aliases/tmux.zsh
+ZSH_THEME="robbyrussell"
 
-# Source all configuration files
-for file in ~/.zsh/env/*.zsh; do
-  [[ -r "$file" ]] && source "$file"
-done
+plugins=(z git sudo)
 
-for file in ~/.zsh/plugins/*.zsh; do
-  [[ -r "$file" ]] && source "$file"
-done
+export PATH="$HOME/.local/share/bin:$PATH"
 
-for file in ~/.zsh/functions/*.zsh; do
-  [[ -r "$file" ]] && source "$file"
-done
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZSH/oh-my-zsh.sh
 
-for file in ~/.zsh/aliases/*.zsh; do
-  [[ -r "$file" ]] && source "$file"
-done
+export EDITOR=nvim
+export VISUAL=nvim
 
-# Source Powerlevel10k configuration
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+alias figma="hyprctl dispatch exec /opt/figma-linux/figma-linux"
+
+alias scan="context-scan scan"
+
+alias ls='eza --icons=auto'
+alias lz='lazygit'
+alias ll='eza -lha --icons=auto --sort=name --group-directories-first'
+alias ld='eza -lhD --icons=auto'
+alias lt='eza --icons=auto --tree'
+
+source ~/.zshenv
+
+export PNPM_HOME="/home/kyza/.local/share/pnpm"
+
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac

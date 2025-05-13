@@ -1,0 +1,37 @@
+/* fix the tabs-bar
+* https://github.com/ghostty-org/ghostty/discussions/3190 */
+tabbar tabbox {
+  padding: 0;
+  background-color: #0B0B0B;
+}
+
+tabbar tabbox separator {
+  background-color: #19191900;
+}
+
+tabbar tabbox tab {
+  font-family: "DM Sans";
+  font-weight: 600;
+  margin: 6px;
+  padding: 6px 3px;
+  font-size: 10.2pt;
+  color: #9ca3af;
+  border-bottom: 2px solid #00000000;
+}
+
+tabbar tabbox tab:selected {
+  background-color: #111111f5;
+  border-bottom: 2px solid #4E88FF00;
+  border-radius: 10;
+}
+
+tabbar tabbox tabboxchild {
+  margin-left: -6px;
+}
+
+tabbar tabbox tab button {
+  border-radius: 0;
+  min-width: 0px;
+  margin-right: -26px;
+}
+

@@ -1,1 +1,0 @@
-alias scan='context scan'

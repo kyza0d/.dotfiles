@@ -14,22 +14,22 @@ grapheme-width-method = legacy
 # adjust-cell-height = 9
 # adjust-cell-width = 2
 
-font-family = Iosevka Semibold
-font-family-bold = Iosevka
-# font-size = 10.9
-font-size = 11.5
-# font-size = 13.7
-adjust-cell-height = 9
-adjust-cell-width = 1
+# font-family = Iosevka Medium
+# font-family-bold = Iosevka
+# # font-size = 10.9
+# font-size = 11.5
+# # font-size = 13.7
+# adjust-cell-height = 9
+# adjust-cell-width = 1
 
-# font-family = Iosevka Term Curly Semibold
+font-family = Iosevka Term Curly Semibold
+font-size = 13
+font-family-bold = Iosevka Term Curly
 # font-size = 13
-# font-family-bold = Iosevka Term Curly
-# # font-size = 13
-# font-size = 10.6
-# # font-size = 11.3
-# adjust-cell-height = 10
-# adjust-cell-width = 2
+font-size = 10.6
+# font-size = 11.3
+adjust-cell-height = 10
+adjust-cell-width = 2
 
 # font-family = Iosevka Term Curly Slab Medium
 # font-family-bold = Iosevka Term Curly Slab
@@ -120,4 +120,3 @@ keybind = alt+ctrl+d=close_surface
 confirm-close-surface = false
 
 keybind = alt+ctrl+i=inspector:toggle
-keybind = shift+enter=text:\n

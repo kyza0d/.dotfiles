@@ -1,8 +1,13 @@
 /* fix the tabs-bar
 * https://github.com/ghostty-org/ghostty/discussions/3190 */
+tabbar {
+  background-color: #0B0B0B;
+}
+
 tabbar tabbox {
   padding: 0;
-  background-color: #0B0B0B;
+  margin: 7px 2px;
+  background-color: none  border-top: 1px solid #191919;
 }
 
 tabbar tabbox separator {
@@ -11,27 +16,38 @@ tabbar tabbox separator {
 
 tabbar tabbox tab {
   font-family: "DM Sans";
-  font-weight: 600;
-  margin: 6px;
-  padding: 6px 3px;
+  /* font-size: 10.2pt; */
+  /* font-family: "Iosevka Aile"; */
+  /* font-family: "Fantasque Sans Mono"; */
+  letter-spacing: 0.2px;
+  /* font-size: 10.7pt; */
   font-size: 10.2pt;
-  color: #9ca3af;
+  font-weight: 500;
+  color: #666666;
+
+  padding: 6px 14px 6px 30px;
+  margin: 0px 8px 0px 0px;
+
   border-bottom: 2px solid #00000000;
+  border-radius: 6px;
 }
 
 tabbar tabbox tab:selected {
   background-color: #111111f5;
+  /* background-color: #00000000; */
+  color: #eeeeee;
+
   border-bottom: 2px solid #4E88FF00;
-  border-radius: 10;
+  border-radius: 6px;
 }
 
 tabbar tabbox tabboxchild {
+  border-radius: 0px;
   margin-left: -6px;
 }
 
 tabbar tabbox tab button {
-  border-radius: 0;
   min-width: 0px;
-  margin-right: -26px;
+  margin-right: -70px;
 }
 

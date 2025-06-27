@@ -2,7 +2,7 @@
 
 background = #12140D
 
-background-opacity = 0.94
+background-opacity = 0.93
 # background-opacity = 1.0
 
 grapheme-width-method = legacy

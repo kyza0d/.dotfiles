@@ -1,7 +1,8 @@
 /* fix the tabs-bar
 * https://github.com/ghostty-org/ghostty/discussions/3190 */
+
 tabbar {
-  background-color: #0B0B0B;
+  height: 0px;
 }
 
 tabbar tabbox {

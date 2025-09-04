@@ -18,7 +18,3 @@ source=~/.config/hypr/custom/execs.conf
 source=~/.config/hypr/custom/general.conf
 source=~/.config/hypr/custom/rules.conf
 source=~/.config/hypr/custom/keybinds.conf
-
-windowrulev2 = minsize 1 1, class:^(zen-alpha)$
-windowrulev2 = maxsize 99999 99999, class:^(zen-alpha)$
-windowrulev2 = suppressevent fullscreen, class:^(zen-alpha)$

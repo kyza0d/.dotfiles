@@ -1,45 +1,42 @@
-/* fix the tabs-bar
-* https://github.com/ghostty-org/ghostty/discussions/3190 */
-
 tabbar {
-  height: 0px;
+  background-color: #313131;
+  padding: 0px;
+  margin-top: -2px;
+  margin-left: -22px
 }
 
 tabbar tabbox {
-  padding: 0;
-  margin: 7px 2px;
-  background-color: none  border-top: 1px solid #191919;
+  margin: -8px 0;
+  padding: 14 0 0 0;
+  border: 3px solid #1A1B1E;
+  background-color: none;
 }
 
 tabbar tabbox separator {
-  background-color: #19191900;
+  background-color: #313131;
 }
 
 tabbar tabbox tab {
-  font-family: "DM Sans";
-  /* font-size: 10.2pt; */
-  /* font-family: "Iosevka Aile"; */
-  /* font-family: "Fantasque Sans Mono"; */
-  letter-spacing: 0.2px;
-  /* font-size: 10.7pt; */
-  font-size: 10.2pt;
-  font-weight: 500;
+  font-family: "Lotion";
+  letter-spacing: 0.7px;
+  font-size: 12.6pt;
+  font-weight: 400;
   color: #666666;
+  background-color: #313131;
 
-  padding: 6px 14px 6px 30px;
-  margin: 0px 8px 0px 0px;
+  padding: 0px 20px 0px 30px;
+  margin: 0px 0px 0px 0px;
 
-  border-bottom: 2px solid #00000000;
-  border-radius: 6px;
+  border-bottom: 1px solid #313131;
+  border-radius: 0px;
 }
 
 tabbar tabbox tab:selected {
-  background-color: #111111f5;
-  /* background-color: #00000000; */
+  background-color: #313131;
   color: #eeeeee;
 
-  border-bottom: 2px solid #4E88FF00;
-  border-radius: 6px;
+  border-bottom: 1px solid #8CBE8C;
+  border-radius: 0px;
 }
 
 tabbar tabbox tabboxchild {

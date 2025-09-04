@@ -1,90 +1,39 @@
-# theme = carbonfox
 
-background = #12140D
-
-background-opacity = 0.93
-# background-opacity = 1.0
-
+background-opacity = 1.0
 grapheme-width-method = legacy
 
-# font-family = JetBrainsMono NFP SemiBold
-# # font-size = 10.9
-# font-size = 10.5
-# # font-size = 13.7
-# adjust-cell-height = 9
-# adjust-cell-width = 2
-
-font-family = Iosevka Semibold
-font-family-bold = Iosevka
-# font-size = 10.9
-font-size = 11.5
-# font-size = 13.7
-adjust-cell-height = 9
-adjust-cell-width = 1
-
-# font-family = Iosevka Term Curly Semibold
-# font-size = 13
-# font-family-bold = Iosevka Term Curly
-# # font-size = 13
-# font-size = 10.6
-# # font-size = 11.3
+# font-family = Iosevka Medium
+# font-family-bold = Iosevka ExtraBold
+# font-size = 13.2
 # adjust-cell-height = 10
 # adjust-cell-width = 2
 
-# font-family = Iosevka Term Curly Slab Medium
-# font-family-bold = Iosevka Term Curly Slab
-# # font-size = 13
-# font-size = 12.6
-# font-size = 11.3
-# adjust-cell-height = 10
-# adjust-cell-width = 1
-
-# font-family = Martian Mono
-# font-family-bold = Martian Mono
-# # font-size = 8.9
-# font-size = 11.5
-# adjust-cell-height = 11
-# adjust-cell-width = 1
-
-# font-family = Fantasque Sans Mono
-# font-family-bold = Fantasque Sans Mono
-# # font-size = 12.2
-# font-size = 12.2
-# # font-size = 10.5
-# adjust-cell-height = 13
-# adjust-cell-width = 2
-
-# font-family = CozetteVector
-# font-family-bold = CozetteVector
-# font-size = 10.2
-# # font-size = 10.5
-# adjust-cell-height = 10
-# adjust-cell-width = 1
-
-# font-family = ProggySmallTT
-# font-family-bold = ProggySmallTT
-# font-size = 12.2
-# adjust-cell-height = 7
+# font-family = JetBrainsMonoNL NFP
+# font-family-bold = JetBrainsMonoNL NFP
+# font-size = 13.3
+# adjust-cell-height = 8
 # adjust-cell-width = 1
 
 # font-family = Cartograph CF
-# # font-size = 9.5
-# font-size = 10.4
-# adjust-cell-height = 10
-# adjust-cell-width = 2
-
-# font-family = InputMono Medium
-# font-size = 8.7
-# adjust-cell-height = 10
+# font-family-bold = Cartograph CF
+# font-size = 13.3
+# adjust-cell-height = 8
 # adjust-cell-width = 1
 
-adjust-underline-position = 8
+font-family = Lotion
+font-family-bold = Lotion
+font-size = 11.7
+adjust-cell-height = 8
+adjust-cell-width = 2
+
+adjust-underline-position = 9
 adjust-underline-thickness = 0
+adjust-strikethrough-position = -18
 
-adjust-cursor-height = 4
-adjust-cursor-thickness = 0
+adjust-cursor-height = 7
+adjust-cursor-thickness = 1
 
-adjust-box-thickness = 0
+adjust-box-thickness = -1
 
 mouse-scroll-multiplier = 1
 
@@ -102,6 +51,8 @@ keybind = alt+period=text:nvim\n
 window-inherit-working-directory = true
 
 keybind = alt+ctrl+o=new_tab
+keybind = alt+ctrl+enter=new_split:right
+keybind = alt+ctrl+]=resize_split:right,10
 
 keybind = alt+ctrl+l=next_tab
 keybind = alt+ctrl+h=previous_tab
@@ -121,3 +72,9 @@ confirm-close-surface = false
 
 keybind = alt+ctrl+i=inspector:toggle
 keybind = shift+enter=text:\n
+
+# xeno.nvim theme colors
+background = 191919
+foreground = a8a8a8
+cursor-color = 589c58
+# End xeno.nvim theme colors

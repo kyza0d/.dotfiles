@@ -1,0 +1,51 @@
+tabbar {
+  background-color: #313131;
+  padding: 0px;
+  margin-top: -2px;
+  margin-left: -22px
+}
+
+tabbar tabbox {
+  margin: -8px 0;
+  padding: 14 0 0 0;
+  border: 3px solid #1A1B1E;
+  background-color: none;
+}
+
+tabbar tabbox separator {
+  background-color: #313131;
+}
+
+tabbar tabbox tab {
+  font-family: "Lotion";
+  letter-spacing: 0.7px;
+  font-size: 12.6pt;
+  font-weight: 400;
+  color: #666666;
+  background-color: #313131;
+
+  padding: 0px 20px 0px 30px;
+  margin: 0px 0px 0px 0px;
+
+  border-bottom: 1px solid #313131;
+  border-radius: 0px;
+}
+
+tabbar tabbox tab:selected {
+  background-color: #313131;
+  color: #eeeeee;
+
+  border-bottom: 1px solid #8CBE8C;
+  border-radius: 0px;
+}
+
+tabbar tabbox tabboxchild {
+  border-radius: 0px;
+  margin-left: -6px;
+}
+
+tabbar tabbox tab button {
+  min-width: 0px;
+  margin-right: -70px;
+}
+

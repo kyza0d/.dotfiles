@@ -1,0 +1,151 @@
+# Zathura configuration file
+# Based on your custom color scheme
+
+# ==========================================
+# COLOR SCHEME - DARK THEME (DEFAULT)
+# ==========================================
+set default-bg                   "#282828"  # color-landing-base
+set default-fg                   "#dddddd"  # color-landing-foreground
+
+set statusbar-bg                  "#1e1e1e"  # color-landing-base-darker
+set statusbar-fg                  "#eeeeee"  # color-landing-headers
+
+set inputbar-bg                   "#1e1e1e"  # color-landing-base-darker
+set inputbar-fg                   "#eeeeee"  # color-landing-headers
+
+set notification-bg               "#282828"  # color-landing-base
+set notification-fg               "#dddddd"  # color-landing-foreground
+
+set notification-error-bg         "#ff6b6b"
+set notification-error-fg         "#ffffff"
+
+set notification-warning-bg       "#ffa500"
+set notification-warning-fg       "#000000"
+
+set highlight-color               "#8cbe8c"  # color-landing-primary
+set highlight-active-color        "#7ab07a"  # color-landing-secondary-saturated
+
+set completion-bg                 "#282828"  # color-landing-base
+set completion-fg                 "#dddddd"  # color-landing-foreground
+set completion-group-bg           "#1e1e1e"  # color-landing-base-darker
+set completion-group-fg           "#eeeeee"  # color-landing-headers
+set completion-highlight-bg       "#8cbe8c"  # color-landing-primary
+set completion-highlight-fg       "#1e1e1e"  # color-landing-secondary-shaded
+
+set index-bg                      "#282828"  # color-landing-base
+set index-fg                      "#dddddd"  # color-landing-foreground
+set index-active-bg               "#8cbe8c"  # color-landing-primary
+set index-active-fg               "#1e1e1e"  # color-landing-secondary-shaded
+
+set render-loading-bg             "#282828"  # color-landing-base
+set render-loading-fg             "#cccccc"  # color-landing-muted
+
+set recolor-lightcolor            "#282828"  # color-landing-base (page background)
+set recolor-darkcolor             "#dddddd"  # color-landing-foreground (text color)
+
+# ==========================================
+# GENERAL SETTINGS
+# ==========================================
+set font                         "JetBrains Mono 11"
+set selection-clipboard          clipboard
+set adjust-open                  best-fit
+set pages-per-row                1
+set scroll-page-aware            true
+set scroll-full-overlap          0.01
+set scroll-step                  50
+set zoom-min                     10
+set zoom-max                     1000
+set render-loading               false
+set incremental-search           true
+set abort-clear-search           true
+set advance-pages-per-row        false
+set scroll-wrap                  false
+set window-title-home-tilde      true
+set statusbar-home-tilde         true
+set recolor                      true
+set recolor-keephue              true
+set recolor-reverse-video        true
+
+# ==========================================
+# KEYBINDINGS
+# ==========================================
+
+# Theme toggle (Alt+o)
+map <A-o> set "first-page-column 1:2" toggle
+map <A-o> feedkeys ":set recolor<Return>"
+
+# Navigation improvements
+map u scroll half-up
+map d scroll half-down
+map D toggle_page_mode
+map r reload
+map R rotate
+map i recolor
+map I set "recolor true"
+
+# Zoom controls
+map = zoom in
+map - zoom out
+map 0 zoom best-fit
+map 9 zoom width
+map 8 zoom 100%
+
+# Page navigation
+map gg goto top
+map G goto bottom
+map <C-g> goto
+
+# Search improvements  
+map <C-f> search forward
+map <C-b> search backward
+map n search next
+map N search previous
+
+# Tab-like behavior (if multiple documents)
+map <C-t> open
+map <C-w> quit
+map <C-r> reload
+
+# Presentation mode
+map <F5> toggle_presentation
+map <F11> toggle_fullscreen
+
+# Copy current page number to clipboard
+map <C-c> feedkeys ":exec echo -n $PAGE | xclip -selection clipboard<Return>"
+
+# Toggle status bar
+map <C-n> toggle_statusbar
+
+# Bookmark functionality (using marks)
+map m mark_add
+map "'" mark_evaluate
+
+# Quick zoom levels
+map 1 set "zoom 50"
+map 2 set "zoom 75" 
+map 3 set "zoom 100"
+map 4 set "zoom 125"
+map 5 set "zoom 150"
+
+# Navigation with home row
+map h navigate previous
+map l navigate next
+map j scroll down
+map k scroll up
+
+# Better page flipping
+map <Space> scroll full-down
+map <S-Space> scroll full-up
+map <BackSpace> scroll full-up
+
+# Index/outline navigation
+map <Tab> toggle_index
+map <S-Tab> toggle_index
+
+# ==========================================
+# STARTUP OPTIONS
+# ==========================================
+# Uncomment these if you want them as defaults
+# set first-page-column 1:2  # Two-page layout
+# set continuous-hist-save true
+# set database sqlite
